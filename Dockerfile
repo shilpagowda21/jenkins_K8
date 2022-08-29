@@ -6,7 +6,7 @@ RUN apk update && apk add /bin/sh
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
 
-COPY target/demo 0.0.1-SNAPSHOT.war $PROJECT_HOME/demo.war
+COPY target/demo-0.0.1-SNAPSHOT.war $PROJECT_HOME/demo.war
 
 WORKDIR $PROJECT_HOME
 EXPOSE 8080
