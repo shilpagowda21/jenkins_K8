@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    name: demowebapp
-  name: demowebapp
+  name: demo-deployment
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: demowebapp
   template:
     metadata:
+      name: demopod
       labels:
-        name: demowebapp
+        app: demowebapp
     spec:
       containers:
       - image: shilpa21/demo
-        name: demowebapp
+        name: demowebappcontainer
         ports:
         - name: demowebapp
           containerPort: 8080  
