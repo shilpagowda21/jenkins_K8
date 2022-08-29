@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     name: demowebapp
-  name: demo-deployment
+  name: demowebapp
 spec:
   replicas: 3
   template:
